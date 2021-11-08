@@ -1,0 +1,37 @@
+import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
+
+public class PrintFormat {
+	public static void main(String args[]){
+		printPattern();
+	}
+
+	private static void printPattern() {
+
+		for(int i=1;i<=4;i++){
+			for (int k=3;k>=i;k--){
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i;j++){
+
+					System.out.print( "*" + " ");
+
+			}
+
+			System.out.println();
+
+
+			}
+		for(int i=1;i<5;i++){
+			for(int k=1;k<=i;k++){
+				System.out.print(" ");
+			}
+			for (int j=1;j<5-i;j++){
+				System.out.print("* ");
+			}
+			System.out.println();
+
+
+		}
+	}
+}
