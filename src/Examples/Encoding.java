@@ -1,4 +1,4 @@
-package assignment1;
+package Examples;
 
 import java.nio.charset.CharsetEncoder;
 import java.nio.charset.StandardCharsets;

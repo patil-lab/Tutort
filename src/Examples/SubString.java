@@ -1,4 +1,4 @@
-package assignment1;
+package Examples;
 
 public class SubString {
 
