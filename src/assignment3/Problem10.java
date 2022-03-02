@@ -7,7 +7,7 @@ public class Problem10 {
 
 	public static void main(String[] args){
 
-		int[] nums={2,10,36,99};
+		int[] nums = {2, 3, 36, 99};
 		List<String> list=findMissing(nums,4);
 		System.out.println("k");
 	}
@@ -23,7 +23,7 @@ public class Problem10 {
 				if (nums[i] - lower == 1) {
 					list.add(lower + "");
 				} else {
-					list.add(lower + "-->" + (nums[i] - 1));
+					list.add(lower + "-->" + (nums[i]));
 				}
 			}else{
 

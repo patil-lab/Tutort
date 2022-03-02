@@ -8,8 +8,8 @@ public class Encoding {
 
 	public static void main(String args[]){
 		{
-			String userName="RB88OTP";
-			String password="8Thurs27";
+			String userName = "FUN88";
+			String password = "21Thurs56";
 
 			CharsetEncoder encoder = StandardCharsets.UTF_8.newEncoder();
 			if (!encoder.canEncode(userName) || !encoder.canEncode(password)) {

@@ -24,9 +24,9 @@ public class Problem12 {
 				int sum=nums[i]+nums[start]+nums[end];
 				if(sum<target){
 					list.add(Arrays.asList(nums[i],nums[start],nums[end]));
-					start++;
-				}else {
 					end--;
+				} else {
+					start++;
 				}
 			}
 		}
