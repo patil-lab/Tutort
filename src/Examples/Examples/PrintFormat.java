@@ -1,5 +1,4 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
+package Examples;
 
 public class PrintFormat {
 	public static void main(String args[]){

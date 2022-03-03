@@ -1,5 +1,6 @@
-public class PrintArray {
+package Examples;
 
+public class PrintArray {
 
 
 	public static void main(String[] args){
@@ -10,7 +11,7 @@ public class PrintArray {
 	private static void printArray(int[] iArr) {
 
 		int l=iArr.length;
-		for(int i=0;i<l;i++){
+		for(int i = 0; i<l; i++){
 			System.out.println(iArr[i]);
 		}
 	}
