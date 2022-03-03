@@ -2,6 +2,7 @@ package Examples;
 
 
 public class RoboGrid {
+	public static int x = 0, y = 0;
 
 	public static void main(String[] args) {
 		Commands cmd1 = new Commands();
@@ -11,16 +12,16 @@ public class RoboGrid {
 		cmd2.setCmd(CommandEnum.RGT);
 		cmd2.setValue(2);
 		Commands cmd3 = new Commands();
-		int x = 0, y = 0;
+
 		cmd3.setCmd(CommandEnum.UNDO);
 		cmd3.setValue(1);
 		Commands[] cmds = {cmd1, cmd2, cmd3};
-		ReturnEnum returnEnum = parseComds(cmds, x, y);
-		System.out.println("X: " + x + "Y: " + y);
+		ReturnEnum returnEnum = parseComds(cmds);
+		System.out.println(" X: " + x + " Y: " + y);
 	}
 
 
-	private static ReturnEnum parseComds(Commands cmds[], int outX, int outY) {
+	private static ReturnEnum parseComds(Commands cmds[]) {
 
 		int countUp = 0, countDown = 0;
 		int countLeft = 0, countRight = 0;
@@ -72,8 +73,8 @@ public class RoboGrid {
 			}
 		}
 
-		outX = countRight - countLeft;
-		outY = countUp - countDown;
+		x = countRight - countLeft;
+		y = countUp - countDown;
 
 		return ReturnEnum.SUCCESS;
 
