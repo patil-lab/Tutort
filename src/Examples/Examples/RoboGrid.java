@@ -17,7 +17,7 @@ public class RoboGrid {
 		cmd3.setValue(1);
 		Commands[] cmds = {cmd1, cmd2, cmd3};
 		ReturnEnum returnEnum = parseComds(cmds);
-		System.out.println(" X: " + x + " Y: " + y);
+		System.out.println(" X : " + x + " Y : " + y);
 	}
 
 
