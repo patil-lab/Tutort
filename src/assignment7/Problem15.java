@@ -14,7 +14,7 @@ public class Problem15 {
 		temp = head;
 		while (temp != null) {
 			Node copy = temp.next;
-			if (copy.random != null) copy.random = copy.random.next;
+			if (copy.random != null) copy.random = temp.random.next;
 			temp = copy.next;
 		}
 

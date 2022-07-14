@@ -34,4 +34,34 @@ public class Example1 {
 		}
 		return result;
 	}
+
+
+	public static int waterTrapped1(int[] height) {
+		int m = height.length;
+		int result = 0;
+		for (int i = 1; i < m - 1; i++) {
+			int left = height[i];
+			for (int j = 0; j < i; j++) {
+				left = Math.max(left, height[j]);
+			}
+
+			int right = height[i];
+			for (int j = i + 1; j < m; j++) {
+				right = Math.max(right, height[j]);
+			}
+
+			result += Math.min(left, right) - height[i];
+
+		}
+
+		return result;
+	}
+
+	public static int waterTrapped2(int[] height) {
+		int m = height.length;
+		int[] left = new int[m];
+		int[] right = new int[m];
+
+		return 0;
+	}
 }

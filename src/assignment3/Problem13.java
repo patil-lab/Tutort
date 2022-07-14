@@ -18,10 +18,10 @@ public class Problem13 {
 		int res=0;
 		int min=Integer.MAX_VALUE;
 		for(int i=0;i<m-2;i++){
-			int j=i+1;
-			int k=m-1;
-			while (j<k){
-				int sum=nums[i]+nums[j]+nums[k];
+			int left = i + 1;
+			int right = m - 1;
+			while (left < right) {
+				int sum = nums[i] + nums[left] + nums[right];
 				int diff=Math.abs(sum-target);
 				if(diff==0)
 					return sum;
@@ -30,9 +30,9 @@ public class Problem13 {
 					res=sum;
 				}
 				if(sum<target){
-					j++;
+					left++;
 				}else {
-					k--;
+					right--;
 				}
 			}
 		}

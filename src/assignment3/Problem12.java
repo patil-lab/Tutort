@@ -32,4 +32,25 @@ public class Problem12 {
 		}
 		return list;
 	}
+
+	static List<List<Integer>> threeSumSmaller2(int[] nums, int target) {
+		int m = nums.length;
+		Arrays.sort(nums);
+		List<List<Integer>> lists = new ArrayList<>();
+		for (int i = 0; i < m; i++) {
+			int left = i + 1;
+			int right = m - 1;
+			while (left < right) {
+				int sum = nums[i] + nums[left] + nums[right];
+				if (sum < target) {
+					lists.add(Arrays.asList(nums[i], nums[left], nums[right]));
+					right--;
+				} else {
+					left++;
+				}
+			}
+
+		}
+		return lists;
+	}
 }
