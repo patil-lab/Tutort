@@ -38,7 +38,7 @@ public class BSTImpl {
 		return root;
 	}
 
-	private BstNode insert(BstNode root, int data) {
+	public BstNode insert(BstNode root, int data) {
 		if (root == null) {
 			root = createNewNode(data);
 		} else if (data <= root.data) {
@@ -51,7 +51,7 @@ public class BSTImpl {
 		return root;
 	}
 
-	private boolean search(BstNode root, int data) {
+	public boolean search(BstNode root, int data) {
 		if (root == null) return false;
 		else if (root.data == data) return true;
 		else if (root.data < data) return search(root.right, data);
@@ -67,7 +67,7 @@ public class BSTImpl {
 		return root.data;
 	}
 
-	private int findMax(BstNode root) {
+	public int findMax(BstNode root) {
 		if (root == null) return -1;
 		else if (root.right != null) root = root.right;
 
@@ -135,7 +135,7 @@ public class BSTImpl {
 		return root.data <= data && isSubTreeLesser(root.left, data) && isSubTreeLesser(root.right, data);
 	}
 
-	private BstNode delete(BstNode root, int data) {
+	public BstNode delete(BstNode root, int data) {
 		if (root == null) return root;
 		else if (data < root.data) root.left = delete(root.left, data);
 		else if (data > root.data) root.right = delete(root.right, data);
@@ -174,7 +174,7 @@ public class BSTImpl {
 		return root;
 	}
 
-	class BstNode {
+	public class BstNode {
 		int data;
 		BstNode left;
 		BstNode right;

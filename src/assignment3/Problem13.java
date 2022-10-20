@@ -15,8 +15,7 @@ public class Problem13 {
 	private static int threeSumClosest(int[] nums,int target){
 		int m=nums.length;
 		Arrays.sort(nums);
-		int res=0;
-		int min=Integer.MAX_VALUE;
+		int res = Integer.MAX_VALUE;
 		for(int i=0;i<m-2;i++){
 			int left = i + 1;
 			int right = m - 1;
@@ -25,8 +24,7 @@ public class Problem13 {
 				int diff=Math.abs(sum-target);
 				if(diff==0)
 					return sum;
-				if(diff<min){
-					min=diff;
+				if (diff < res) {
 					res=sum;
 				}
 				if(sum<target){
